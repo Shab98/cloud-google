@@ -3,7 +3,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.provider :google do |google, override|
     google.google_project_id = "vagrant-303411"
-    google.google_json_key_location = "vagrant-303411-4bb19da15c7e.json"
+    google.google_json_key_location = "vagrant-303411-27283144b0d8.json"
 
     google.image_family = 'ubuntu-1604-lts'
 
@@ -76,6 +76,7 @@ Vagrant.configure("2") do |config|
           start-yarn.sh
           wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1lHA__LfMEEuDQajciWqvGKlOTbx0gvPJ' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1lHA__LfMEEuDQajciWqvGKlOTbx0gvPJ" -O file.zip && rm -rf /tmp/cookies.txt
           wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1aYiaralEKoX-BjhbM4Euwtjq398AJN2Z' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1aYiaralEKoX-BjhbM4Euwtjq398AJN2Z" -O mapreduce.jar && rm -rf /tmp/cookies.txt
+          sudo apt-get install -y unzip
           unzip file.zip
           wget ftp://custsrv1.bth.se/FTP/ClonyMcCloneface/Return-of-the-Jedi.tar.gz
           tar -xf Return-of-the-Jedi.tar.gz

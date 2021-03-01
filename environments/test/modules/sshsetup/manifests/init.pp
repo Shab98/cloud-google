@@ -47,7 +47,7 @@ class sshsetup {
 
   ssh_authorized_key { "ssh_key":
     ensure => present,
-    key => "key",
+    key => "AAAAB3NzaC1yc2EAAAADAQABAAABgQC+SawtVhFRBz39jqcGG9+QZPmDZr2ANWeTBo1MRuKZ2g0ZE2ruw12Od7LsPEVLPpJ8p876VPQEhz3wNSEbgUMhzsjDNkfqtOFac1h9SFmVEua2YX43WnhYPhgk+qDF+qDoOY4o81rbtks0hkRRlfO1EOf59+e6zxPzvH5uwXNGd0qXBGfzWJ+NhjmncxTvRBmdS7zju2DG1tXuw8JTqKcyZ/3uYamIaRi5aOh2Unpv9mEj94LDfbwA1RuJIJqIXwh8zoZ3bG/EBPLLrQh6QVbuL7FSUzY6yVCytH8QlfogvdPfoS0n8kxJJxWtIEyRa8tbtjL6ycorF4Ad47QKfgfv4G6DvHu1iyXxVHZcK/WZ1BYFTXaGgUDqY+usbKAJ0PUiX6LLQm9XKySlANXfRKR+f9iYsf2i0maD9imJDKbUM6cKyuTzQAHPuiN0LvZTJ8urz0Weg8gejQ9NF8Z9mfErDcvmS06uqi0qmidXg1R07v0qM0p0zOB0gXYuRFFzIa0=",
     type => "ssh-rsa",
     user => $user,
     require => File["/home/${user}/.ssh/id_rsa.pub"],  
